@@ -1,0 +1,151 @@
+.conversation-container {
+  height: auto;
+  background-color: var(--slate-10);
+  padding-bottom: 10px;
+  // display: flex;
+  .convo-image {
+    height: auto;
+    width: 100vw;
+    img {
+      width: 100vw;
+      object-fit: contain;
+    }
+  }
+  .text-container {
+    background-color: var(--white);
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 40px;
+    gap: 40px;
+    .convo-text {
+      color: var(--Slate, #24272c);
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: "Canella-Regular", serif;
+      font-size: 28px;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+    .contact-line {
+      color: #000;
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Mallory;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+      margin-top: 10px;
+    }
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .contact-title {
+        color: #000;
+        font-family: "Canella-Regular", serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .contact-details {
+        margin-top: 10px;
+        font-family: "Mallory-Book", serif;
+        font-size: 14px;
+      }
+    }
+    .contact-loc {
+      color: #000;
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Mallory;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .get-in-touch {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .get-in-touch > p {
+      color: var(--Slate, #24272c);
+      font-family: Mallory;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conversation-container {
+    .text-container {
+      background-color: var(--white);
+      width: auto;
+      height: auto;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      padding: 40px;
+      gap: 40px;
+      .grid-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        .grid-item {
+          width: 45%;
+        }
+      }
+      .get-in-touch {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .conversation-container {
+    position: relative;
+    height: 800px;
+      .convo-image {
+    height: 800px;
+    width: 100vw;
+    img {
+      width: 100vw;
+      object-fit: cover;
+    }
+  }
+    .text-container {
+      position: absolute;
+      top: 50%;
+      left: 95px;
+      transform: translateY(-50%);
+      background-color: var(--white);
+      width: 570px;
+      height: 509px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
+      padding: 40px;
+      gap: 50px;
+      .grid-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        .grid-item {
+          width: 45%;
+        }
+      }
+      .get-in-touch {
+        display: flex;
+      }
+    }
+  }
+}

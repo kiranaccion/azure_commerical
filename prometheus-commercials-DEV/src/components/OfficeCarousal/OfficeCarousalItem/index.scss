@@ -1,0 +1,55 @@
+@import "../../../styles/mixins.scss";
+
+.selected-item,
+.hovered-item {
+  outline: 2px solid var(--tango);
+}
+.carousal-item-contianer {
+  display: flex;
+  flex-direction: column;
+  .carousal-item-image-container {
+    width: 335px;
+    height: 305px;
+    position: relative;
+    .carousal-item-image {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .carousal-item-details-container {
+    background-color: var(--white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .carousal-item-title {
+      font-family: "Canela-Regular", serif;
+      line-height: 150%;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .carousal-item-description {
+      @include desktop-p2;
+    }
+
+    .carousal-item-read-more {
+      @include read-more-link;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carousal-item-contianer {
+    .carousal-item-image-container {
+      width: 400px;
+      height: 400px;
+    }
+
+    .carousal-item-details-container {
+      padding: 30px;
+      width: 400px;
+    }
+  }
+}

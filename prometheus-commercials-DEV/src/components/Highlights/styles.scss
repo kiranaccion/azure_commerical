@@ -1,0 +1,110 @@
+.highlights-outer-container {
+  background-color: var(--slate-10);
+  padding-block: 47px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  .highlights-title {
+    color: var(--slate);
+    text-align: center;
+    font-family: "Canela-Regular", serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0px;
+  }
+  .highlights-grid {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    .highlights-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .highlights-value {
+        color: #000;
+        text-align: center;
+        font-family: "Canella-Regular", serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .highlights-description {
+        color: #000;
+        text-align: center;
+        font-family: "Mallory-Book", serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        max-width: 70%;
+      }
+    }
+  }
+  .highlights-button {
+    color: var(--white);
+    font-family: "Mallory-Book", serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: var(--tango);
+    padding: 14px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .highlights-outer-container {
+    padding-block: 50px;
+    .highlights-grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      .highlights-card {
+        .highlights-value {
+          font-size: 24px;
+        }
+      }
+      .highlights-card:nth-child(1),
+      .highlights-card:nth-child(2),
+      .highlights-card:nth-child(3),
+      .highlights-card:nth-child(4),
+      .highlights-card:nth-child(5),
+      .highlights-card:nth-child(6) {
+        width: 40%;
+      }
+      .highlights-card:nth-child(7) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .highlights-outer-container {
+    padding-block: 100px;
+    gap: 80px;
+    .highlights-grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      .highlights-card:nth-child(1),
+      .highlights-card:nth-child(2),
+      .highlights-card:nth-child(3) {
+        width: 30%;
+      }
+      .highlights-card:nth-child(4),
+      .highlights-card:nth-child(5),
+      .highlights-card:nth-child(6),
+      .highlights-card:nth-child(7) {
+        width: 22%;
+      }
+    }
+  }
+}

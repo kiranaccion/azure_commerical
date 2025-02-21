@@ -1,0 +1,135 @@
+.hero-outer-container {
+  .hero-container {
+    background-color: var(--slate-15);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vw;
+    max-height: 400px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .image-container {
+      height: max-content;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .hero-heading {
+        color: var(--white);
+        text-align: center;
+        font-family: "Canela-Regular", serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        max-width: 400px;
+      }
+      .hero-text {
+        color: var(--white);
+        text-align: center;
+        font-family: "Mallory-Book", serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150.687%;
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-outer-container {
+    padding: 30px;
+    background-color: var(--slate-15);
+    .hero-container {
+      margin: 0px;
+      .image-container {
+        height: max-content;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 60px;
+        .hero-heading {
+          width: 350px;
+          max-width: none;
+        }
+        .hero-text {
+          color: var(--white);
+          text-align: center;
+          font-family: "Mallory-Book", serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150.687%;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-outer-container {
+    padding: 30px;
+    background-color: var(--slate-15);
+    .hero-container {
+      margin: 0px;
+      height: 690px;
+      max-height: none;
+      .image-container {
+        height: max-content;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 60px;
+        .hero-heading {
+          font-size: 52px;
+          width: 575px;
+          max-width: none;
+        }
+        .hero-text {
+          color: var(--white);
+          text-align: center;
+          font-family: "Mallory-Book", serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150.687%;
+          margin-top: 24px;
+          max-width: 685px;
+        }
+      }
+    }
+  }
+}
+
+.welcome-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  gap: 29px;
+}
+
+.hero-text {
+  text-align: center;
+  font-family: "Canela Text" serif;
+  font-size: 52px;
+  font-weight: 500;
+}
+
+.hero-description-text {
+  text-align: center;
+  font-family: "Mallory" serif;
+  font-size: 20px;
+  font-weight: 400;
+}

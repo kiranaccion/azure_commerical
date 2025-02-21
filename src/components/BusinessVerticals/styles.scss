@@ -1,0 +1,169 @@
+@import '../../styles/mixins.scss';
+
+.business-verticals-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 35px 15px;
+
+  .business-verticals-header {
+    color: var(--slate);
+    text-align: center;
+    font-family: 'Canela-Regular', serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .business-verticals-cards-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 45px;
+
+    .business-verticals-card-item {
+      position: relative;
+      width: 335px;
+      height: 335px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      background-size: cover;
+      background-position-x: center;
+      overflow: hidden;
+      .business-verticals-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: 0.5s ease all;
+        scale: 1.2;
+      }
+      .business-verticals-tint {
+        position: relative;
+        z-index: 2;
+        width: 335px;
+        height: 250px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(18, 18, 18, 0.75) 48.67%);
+
+        .business-verticals-card-content-section {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 20px;
+          gap: 15px;
+
+          .business-vertical-title {
+            color: var(--white);
+            font-family: 'Canela-Regular', serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+          }
+
+          .business-vertical-subtitle {
+            @include desktop-p2;
+            color: var(--white);
+            text-align: center;
+          }
+
+          .read-more-link {
+            width: fit-content;
+
+            .read-more-text-arrow {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: var(--white) !important;
+              @include read-more-link;
+              text-align: center;
+              width: 160px;
+            }
+          }
+        }
+      }
+    }
+    .business-verticals-card-item:hover {
+      .business-verticals-image {
+        transform: scale(0.9);
+        transition: 0.5s ease all;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .business-verticals-container {
+    padding: 57px 30px;
+    .business-verticals-cards-section {
+      width: 708px;
+      gap: 30px;
+      .business-verticals-card-item {
+        width: 708px;
+        height: 508px;
+
+        .business-verticals-tint {
+          width: 708px;
+          height: 378px;
+
+          .business-verticals-card-content-section {
+            width: 416px;
+            gap: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .business-verticals-container {
+    width: 100%;
+    padding: 80px 225px;
+
+    .business-verticals-header {
+      font-size: 36px;
+    }
+
+    .business-verticals-cards-section {
+      width: 100%;
+      flex-direction: row;
+      margin-top: 70px;
+
+      max-width: 1150px;
+      .business-verticals-card-item {
+        width: 363px;
+        height: 363px;
+        background-size: 140%;
+        transition: 0.5s ease all;
+        .business-verticals-tint {
+          width: 363px;
+          height: 270px;
+
+          .business-verticals-card-content-section {
+            width: 303px;
+          }
+        }
+      }
+      .business-verticals-card-item:hover {
+        background-size: 130%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}

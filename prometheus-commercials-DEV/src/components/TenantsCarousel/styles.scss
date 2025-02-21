@@ -1,0 +1,129 @@
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.carousel-section {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin-bottom: 30px;
+  gap: 50px;
+  align-items: center;
+  .carousel-nav-button-left,
+  .carousel-nav-button-right {
+    display: none;
+  }
+  .carousel-viewport {
+    overflow-x: scroll;
+    max-width: calc(100vw - 60px);
+    .carousel-items {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      transition: transform 0.5s ease-in-out;
+      overflow-x: scroll;
+      padding-bottom: 30px;
+    }
+  }
+  .carousel-viewport::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-items::-webkit-scrollbar {
+    padding-top: 30px;
+    background-color: var(--pewter);
+    height: 3px;
+  }
+  .carousel-items::-webkit-scrollbar-thumb {
+    background-color: var(--tango);
+  }
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 297px;
+    height: 300px;
+    background: #ffffff;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    .icon {
+      background-color: #f1f7ff;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      justify-content: center;
+      img {
+        height: 40px;
+        width: 40px;
+      }
+    }
+    .card-link {
+      display: flex;
+      align-items: center;
+      font-family: Mallory;
+      font-size: 18px;
+      font-weight: 500;
+      gap: 10px;
+      line-height: 22.5px;
+      letter-spacing: 0.02em;
+      color: #24272c;
+    }
+    .card-title {
+      font-family: Canela;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      color: #000000;
+    }
+  }
+  .carousel-desktop-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .carousel-section {
+    position: relative;
+    gap: 20px;
+    .carousel-nav-button-left,
+    .carousel-nav-button-right {
+      display: block;
+    }
+    .carousel-item {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  .carousel-viewport::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .carousel-section {
+    position: relative;
+    gap: 20px;
+    .carousel-nav-button-left,
+    .carousel-nav-button-right {
+      display: block;
+      position: relative;
+    }
+    .carousel-items::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-item {
+      width: 298px;
+      height: 300px;
+    }
+  }
+}

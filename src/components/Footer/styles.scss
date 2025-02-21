@@ -1,0 +1,323 @@
+.footer-outer-container {
+  background-color: var(--slate-85);
+  padding: 24px;
+  padding-bottom: 0px;
+  svg {
+    margin: auto;
+  }
+  .footer-inner-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+    .footer-divider {
+      width: 100%;
+      height: 1px;
+      background-color: var(--slate-50);
+    }
+    .footer-links-container {
+      margin-block: 32px;
+      .footer-links-inner-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+      }
+    }
+    .footer-ca-apartments {
+      margin-top: 0px;
+      .footer-links-inner-container {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    }
+    .footer-socials {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 0px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--slate-50);
+      .footer-media-container {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        a:last-child {
+          img {
+            height: 20px;
+          }
+        }
+      }
+    }
+    .footer-links-header {
+      color: var(--White, #fff);
+      font-family: 'Mallory-Book', serif;
+      font-size: 20px;
+    }
+    .footer-links,
+    .common-pages-link {
+      color: var(--White, #fff);
+      font-family: 'Mallory-Book', serif;
+      font-size: 15px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      color: var(--white);
+    }
+  }
+  .bottom-footer-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    justify-content: flex-start;
+    color: var(--White, #fff);
+    text-align: left;
+    font-family: 'Mallory-Book', serif;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-outer-container {
+    padding-inline: 20%;
+    padding-top: 50px;
+    svg {
+      margin-left: 0px;
+    }
+    .footer-inner-container {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0px;
+      .footer-divider {
+        width: 100%;
+        height: 1px;
+        background-color: var(--slate-50);
+      }
+      .footer-links-container {
+        margin-block: 32px;
+        .footer-links-inner-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-top: 16px;
+          .footer-links {
+            width: 140px;
+            font-size: 16px;
+          }
+        }
+      }
+      .footer-socials {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        // .footer-media-container {
+        // }
+      }
+      .footer-links-header {
+        color: var(--White, #fff);
+        font-family: 'Mallory-Book', serif;
+        font-size: 20px;
+        width: min-content;
+        min-width: 250px;
+        display: block;
+      }
+      .footer-links,
+      .common-pages-link {
+        color: var(--White, #fff);
+        font-family: 'Mallory-Book', serif;
+        font-size: 15px;
+        width: 200px;
+      }
+    }
+    .bottom-footer-strip {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-outer-container {
+    padding-inline: 30px;
+    display: flex;
+    justify-content: center;
+    .footer-main-container {
+      width: 100%;
+      max-width: 1920px;
+      .footer-inner-container {
+        width: 100%;
+        position: relative;
+        flex-direction: row;
+        padding-bottom: 80px;
+        align-items: flex-start;
+        max-width: none;
+        justify-content: space-between;
+        margin-inline: auto;
+        .footer-ca-apartments {
+          padding-left: 0px !important;
+          .footer-links-inner-container {
+            display: grid;
+            grid-template-columns: auto auto;
+          }
+        }
+        .common-pages-container {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          padding-bottom: 10px;
+          padding-inline: 20px;
+          padding-left: 0px !important;
+          border-block: 1px solid var(--slate-50);
+          .footer-links-inner-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .common-pages-link {
+              width: auto;
+            }
+          }
+          .footer-links-header {
+            width: min-content;
+            min-width: 250px;
+          }
+        }
+        .footer-divider {
+          width: 1px;
+          height: 310px;
+        }
+        .footer-data-common {
+          .prom-data-container {
+            flex-direction: column;
+            margin-top: 0px;
+            .footer-links {
+              font-size: 20px;
+            }
+          }
+        }
+        .apartments-commercial-container {
+          .footer-data-apartments,
+          .footer-data-commercial {
+            .footer-links-inner-container {
+              flex-direction: column;
+            }
+          }
+          .footer-data-apartments {
+            margin-bottom: 30px;
+          }
+          .footer-divider-mobile-only {
+            display: block;
+          }
+        }
+        .footer-og-apartments,
+        .footer-ws-apartments {
+          width: min-content;
+          margin-bottom: 30px !important;
+        }
+        .footer-ca-apartments,
+        .oregon-washington-container,
+        .apartments-commercial-container,
+        .footer-data-common {
+          height: 270px;
+          margin: 0px;
+          display: flex;
+          flex-direction: column;
+          padding-left: 20px;
+        }
+        .oregon-washington-container {
+          .footer-divider {
+            display: none;
+          }
+        }
+        .footer-links-container {
+          margin: 0px;
+          .footer-links-header {
+            font-size: 20px;
+          }
+          .footer-links-inner-container {
+            margin-bottom: 10px;
+          }
+        }
+        .footer-socials {
+          flex-direction: column;
+          padding-left: 20px;
+          height: 260px;
+          justify-content: space-between;
+          align-items: flex-start;
+          border-bottom: none;
+          .footer-media-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            svg {
+              margin-left: 10px !important;
+            }
+          }
+        }
+        // :nth-child(10) {
+        //   display: none;
+        // }
+      }
+      .bottom-footer-strip {
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 20px;
+        margin-inline: auto;
+        padding-inline: 30px;
+        padding-left: 0px;
+        // p {
+        //   margin-left: calc((100vw - 1220px) / 2);
+        // }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .footer-outer-container {
+    svg {
+      margin-left: 0px;
+    }
+    .footer-inner-container {
+      max-width: max-content;
+      padding-bottom: 80px !important;
+      .footer-links-container {
+        padding-left: 30px;
+      }
+    }
+    .bottom-footer-strip {
+      // p {
+      //   margin-left: calc((100vw - 1220px) / 2);
+      // }
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .footer-divider {
+    display: block !important;
+  }
+  .footer-main-container {
+    // padding-bottom: 50px;
+    .footer-divider-02 {
+      width: 100%;
+      height: 1px;
+      background-color: var(--slate-50);
+      margin-bottom: 20px;
+    }
+    .bottom-footer-padding {
+      padding-bottom: 80px;
+    }
+  }
+}

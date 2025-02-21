@@ -1,0 +1,98 @@
+.carousal-component-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 20px;
+  background-color: var(--slate-15);
+
+  .carousal-section {
+    width: 335px;
+    position: relative;
+    .carousal-arrows-container {
+      display: none;
+    }
+    .carousal-items-container {
+      display: flex;
+      gap: 20px;
+      width: 335px;
+      overflow-x: auto;
+      padding-bottom: 30px;
+      padding-top: 2px;
+      padding-inline: 2px;
+    }
+  }
+}
+
+.carousal-items-container::-webkit-scrollbar {
+  padding-top: 30px;
+  background-color: var(--pewter);
+  height: 3px;
+}
+.carousal-items-container::-webkit-scrollbar-thumb {
+  background-color: var(--tango);
+}
+
+@media screen and (min-width: 768px) {
+  .carousal-component-section {
+    padding: 30px;
+    width: 100%;
+    .carousal-section {
+      width: 708px;
+
+      .carousal-items-container {
+        width: 708px;
+        gap: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .carousal-component-section {
+    .carousal-section {
+      width: 1220px;
+
+      .carousal-items-container {
+        width: 1220px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .carousal-component-section {
+    .carousal-section {
+      width: 1380px;
+      .carousal-arrows-container {
+        position: absolute;
+        display: block;
+        z-index: 2;
+
+        width: 100%;
+        padding: 0 30px;
+        top: 230px;
+
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .carousal-items-container {
+        width: 1380px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .carousal-component-section {
+    .carousal-section {
+      width: 1540px;
+
+      .carousal-items-container {
+        width: 1540px;
+      }
+    }
+  }
+}

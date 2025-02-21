@@ -1,0 +1,42 @@
+.prom-reg-header-container {
+  .prom-reg-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      cursor: pointer;
+    }
+  }
+  .prom-reg-navbar {
+    height: 60px;
+    background-color: var(--slate-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 46px;
+    .prom-reg-nav-links {
+      font-family: "Mallory-Bold", serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+    .prom-reg-nav-active-link {
+      color: #fc4d0f;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .prom-reg-header-container {
+    .prom-reg-navbar {
+      .prom-reg-nav-links {
+        font-size: 16px;
+      }
+    }
+  }
+}

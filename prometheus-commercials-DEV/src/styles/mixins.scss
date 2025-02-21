@@ -1,0 +1,30 @@
+@import "../styles/variables.scss";
+
+@mixin desktop-p2 {
+  font-family: "Mallory-Book", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--slate);
+  text-align: left;
+}
+
+@mixin read-more-link {
+  width: 154px;
+  height: 19px;
+  color: var(--slate);
+  font-size: 14px;
+  font-family: "Mallory-Book", serif;
+  font-weight: 600;
+  font-style: none;
+  line-height: 150%;
+
+  display: flex;
+  gap: 25px;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--tango);
+  }
+}

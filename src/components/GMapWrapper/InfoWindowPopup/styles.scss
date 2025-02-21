@@ -1,0 +1,159 @@
+.gm-style-iw {
+  width: 300px !important;
+  max-width: none !important;
+  height: max-content !important;
+  min-height: 320px !important;
+  max-height: 500px !important;
+  padding: 0px !important;
+  border-radius: 0px !important;
+  .gm-style-iw-d {
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+}
+
+.info-window-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: auto;
+  height: auto;
+  .image-container {
+    height: 150px;
+    width: auto;
+    .carousal-slider {
+      .slick-arrow::before {
+        display: none;
+      }
+      .slick-arrow {
+        z-index: 4 !important;
+        background: transparent;
+        height: 40px;
+        width: 40px;
+      }
+      .slick-prev {
+        left: 5px;
+      }
+      .slick-next {
+        right: 5px;
+      }
+      .office-image-container {
+        height: 150px;
+        width: 100%;
+        position: relative;
+        .office-item-image {
+          height: 150px;
+          width: 305px !important;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    .title {
+      width: 100%;
+      font-family: 'Canela-Regular', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      color: #594c4c;
+    }
+    .description {
+      width: 100%;
+      font-family: 'Mallory-Book', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #000000;
+    }
+    .read-more-button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 0px;
+
+      &:hover .read-more-text {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        color: var(--tango);
+      }
+
+      .read-more-text {
+        font-family: 'Mallory-bold', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #24272c;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info-window-popup {
+    .image-container {
+      height: 150px;
+      width: auto;
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+      padding: 20px;
+      .title {
+        width: 100%;
+        font-family: 'Canela-Regular', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #594c4c;
+      }
+      .description {
+        width: 100%;
+        font-family: 'Mallory-Book', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px !important;
+        line-height: 150%;
+        color: #000000;
+      }
+      .read-more-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+
+        &:hover .read-more-text {
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          color: var(--tango);
+        }
+
+        .read-more-text {
+          font-family: 'Mallory-bold', serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          color: #24272c;
+        }
+      }
+    }
+  }
+}

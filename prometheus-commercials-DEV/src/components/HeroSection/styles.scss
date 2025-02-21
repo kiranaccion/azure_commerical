@@ -1,0 +1,83 @@
+.common-hero-container {
+  position: relative;
+  .common-image-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .welcome-text-container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .hero-text {
+      color: var(--white);
+      text-align: center;
+      font-family: "Canela-Regular", serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-inline: 20px;
+    }
+    .hero-description-text {
+      color: var(--white);
+      text-align: center;
+      font-family: "Mallory-Book", serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150.687%;
+      // margin-top: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .common-hero-container {
+    padding: 20px;
+    background-color: var(--slate-15);
+    .common-image-container {
+      height: 550px;
+    }
+    .welcome-text-container {
+      .hero-text {
+        margin-inline: 23%;
+      }
+      .hero-description-text {
+        margin-inline: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .common-hero-container {
+    height: 700px;
+    padding: 30px;
+    .common-image-container {
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    background-color: var(--slate-15);
+    .welcome-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .hero-text {
+        margin: 0px;
+        font-size: 52px;
+        max-width: 575px;
+      }
+      .hero-description-text {
+        font-size: 20px;
+        max-width: 745px;
+      }
+    }
+  }
+}

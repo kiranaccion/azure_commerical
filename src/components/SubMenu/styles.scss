@@ -1,0 +1,288 @@
+.sub-menu {
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background-color: var(--slate-10);
+  .sub-menu-nav {
+    background-color: var(--slate-10);
+    transition: all 0.05s ease;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    max-width: 1920px;
+  }
+  .sub-menu-mobile-nav {
+    display: none;
+    transition: 1s ease-in-out all;
+  }
+  .menu-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .menu-item:nth-child(2) {
+      margin-left: -11px;
+    }
+  }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+  }
+  .menu-item:last-child {
+    pointer-events: none;
+  }
+  .menu-item:first-child {
+    .menu-link {
+      :hover {
+        path {
+          fill: var(--tango) !important;
+        }
+      }
+    }
+  }
+
+  .menu-link {
+    margin-left: 5px;
+    font-family: 'Mallory-Book', serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14.4px;
+    color: #24272c;
+    text-transform: uppercase;
+  }
+
+  .menu-link:hover {
+    color: var(--tango);
+    // text-decoration: underline;
+  }
+
+  .icon {
+    margin-right: 5px;
+  }
+
+  .more-properties {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-family: 'Mallory-Book', serif;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    p {
+      font-family: 'Mallory-Book', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #24272c;
+    }
+
+    .expand-icon {
+      cursor: pointer;
+    }
+  }
+}
+
+.sub-menu-sticky {
+  position: sticky;
+  top: 0;
+}
+
+.breadcrumbs-card {
+  height: auto;
+  width: 200px;
+  position: absolute;
+  top: 55px;
+  left: 70px;
+  z-index: 100;
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px !important;
+    // padding-bottom: 0 !important;
+    .card-menu-list {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Mallory-Book', serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14.4px;
+      text-align: left;
+      color: #24272c;
+      gap: 10px;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .breadcrumbs-card {
+    display: none;
+  }
+  .sub-menu-sticky {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sub-menu {
+    .sub-menu-nav {
+      display: none;
+      .menu-list {
+        .menu-item {
+          display: none;
+          .menu-link {
+            text-transform: uppercase;
+          }
+        }
+        .menu-item:nth-child(1),
+        .menu-item:last-child {
+          display: flex;
+        }
+        .menu-item:nth-child(1)::after {
+          content: '...';
+          margin-left: 10px;
+        }
+        .menu-item:nth-child(1) {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .sub-menu-mobile-nav {
+      background-color: var(--slate-10);
+      transition: all 0.05s ease;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .menu-list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .menu-item {
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+      }
+
+      .menu-link {
+        margin-left: 5px;
+        font-family: 'Mallory-Book', serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14.4px;
+        color: #24272c;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .ellipse {
+        cursor: pointer;
+      }
+
+      .icon {
+        margin-right: 5px;
+      }
+
+      .more-properties {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        p {
+          font-family: 'Mallory-Book', serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+          letter-spacing: 0.5px;
+          color: #24272c;
+        }
+
+        .expand-icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 767px) {
+//   .more-properties {
+//     p {
+//       display: none;
+//     }
+//     .expand-icon {
+//       display: flex;
+//       gap: 10px;
+//       align-items: center;
+//     }
+//     .expand-icon::before {
+//       display: block;
+//       content: 'MORE';
+//       font-size: 14px;
+//     }
+//   }
+// }
+
+.office-list-hidden {
+  height: 0px !important;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+}
+.office-list {
+  height: 335px;
+  opacity: 1;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
+  &.collapsed {
+    height: 150px !important; // Set the height when sticky...
+    overflow: hidden;
+    .grid {
+      height: 150px;
+      overflow: auto;
+      .office-items-container {
+        height: 150px;
+        overflow: scroll;
+        .card {
+          height: 100px;
+          .content {
+            .description {
+              display: none;
+            }
+          }
+        }
+        .selected {
+          height: 125px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .more-properties {
+    p {
+      display: flex;
+      gap: 4px;
+    }
+    p::after {
+      display: block;
+      content: 'PROPERTIES';
+      font-size: 14px;
+    }
+  }
+}

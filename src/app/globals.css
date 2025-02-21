@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Canela-Bold';
+  src:
+    url(../fonts/Canela-Bold-Web.woff) format('woff'),
+    url(../fonts/Canela-Bold-Web.woff) format('woff2');
+}
+@font-face {
+  font-family: 'Canela-Regular';
+  src:
+    url(../fonts/Canela-Regular-Web.woff) format('woff'),
+    url(../fonts/Canela-Regular-Web.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Mallory-Book';
+  src:
+    url(../fonts/Mallory-Book.woff) format('woff'),
+    url(../fonts/Mallory-Book.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Mallory-Light';
+  src:
+    url(../fonts/Mallory-Light.woff) format('woff'),
+    url(../fonts/Mallory-Light.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Mallory-Medium';
+  src:
+    url(../fonts/Mallory-Medium.woff) format('woff'),
+    url(../fonts/Mallory-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Mallory-Medium';
+  src: url(../fonts/Mallory-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Mallory-Book';
+  src: url(../fonts/Mallory-Book.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Mallory-Bold';
+  src: url(../fonts/Mallory-Bold.ttf) format('truetype');
+}
+
+* {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,170 @@
+.property-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .property-name {
+    width: auto;
+    font-family: 'Canela-Regular', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 57.6px;
+    text-align: left;
+    color: #24272c;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .title {
+      width: auto;
+      // height: 24px;
+
+      font-family: 'Canela-Regular', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .content {
+      width: auto;
+      // height: 21px;
+      font-family: 'Mallory-Book', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+    }
+  }
+
+  .location,
+  .major-tenants {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .title {
+      width: auto;
+      // height: 24px;
+      font-family: 'Canela-Regular', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .content {
+      width: auto;
+      height: auto;
+      white-space: pre-wrap;
+      font-family: 'Mallory-Book', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      .content-line {
+        margin-block: 2px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .building-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .title {
+      width: auto;
+      // height: 24px;
+      font-family: 'Canela-Regular', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .content {
+      width: auto;
+      // height: 63px;
+      font-family: 'Mallory-Book', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      .content-line {
+        margin-block: 2px;
+      }
+    }
+  }
+
+  .leasing-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .title {
+      width: auto;
+      // height: 24px;
+      font-family: 'Canela-Regular', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: auto;
+      height: auto;
+      font-family: 'Mallory-Book', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+      .leasing-contact {
+        .lc-line {
+          margin-block: 2px;
+          .phone-link:hover {
+            color: var(--tango);
+          }
+        }
+        .lc-email:hover {
+          color: var(--tango);
+        }
+      }
+    }
+  }
+
+  .leasing-brochure {
+    padding: 10px 0px;
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 16.8px;
+    letter-spacing: 0.5px;
+    text-align: right;
+  }
+  .leasing-brochure:hover {
+    color: var(--tango);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .property-details-container {
+    width: 100%; // Take full width on mobile
+    order: 2;
+  }
+
+  .main-content {
+    order: 1;
+  }
+}

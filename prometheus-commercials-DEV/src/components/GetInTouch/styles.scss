@@ -1,0 +1,157 @@
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  background: var(--White, #fff);
+  padding: 40px 60px;
+  position: absolute;
+  width: 675px;
+  height: 657px;
+  left: 60px;
+  top: 60px;
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .get-in-touch {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .get-in-touch > p {
+      color: var(--Slate, #24272c);
+      font-family: Canela;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 33.6px;
+      text-align: left;
+    }
+
+    .inquires-info {
+      font-family: Mallory;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+      width: 313px;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 555px;
+    height: 386px;
+
+    .names,
+    .address-email {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 25px;
+      width: 555px;
+      height: 37px;
+
+      .fname,
+      .lname,
+      .email,
+      .phone {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+
+        label {
+          font-family: Mallory;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.8px;
+          text-align: left;
+          color: #45474c;
+          text-transform: uppercase;
+        }
+
+        input {
+          width: 100%;
+          color: #45474c;
+          border: none;
+          border-bottom: 0.5px solid #45474c;
+          outline: none;
+
+          &:focus {
+            border: none;
+            border-bottom: 1px solid #45474c;
+          }
+        }
+      }
+    }
+
+    .tell-us-more {
+      padding: 20px;
+      height: 152px;
+      width: 100%;
+      box-sizing: border-box;
+      width: 555px;
+      background: #ffffff;
+      border: 0.5px solid #45474c;
+      resize: none;
+
+      font-family: Mallory;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      text-align: left;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .info-action {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 70px;
+      width: 100%;
+    
+      .legal-links {
+        display: flex;
+        flex-direction: column;
+        
+        a {
+          font-family: Mallory;
+          font-size: 12px;
+          font-weight: 350;
+          line-height: 16px;
+          text-align: left;
+          color: #24272c;
+          text-decoration: underline;
+        }
+      }
+    
+      .send-btn {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 81px;
+        height: 37px;
+        border: 1px solid #fc4d0f; /* Tango */
+        font-family: Mallory;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.8px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: #fc4d0f;
+      }
+    }
+    
+  }
+}

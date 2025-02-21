@@ -1,0 +1,200 @@
+///////// LOCATION CARDS /////////
+
+.desktopLocationsContainer {
+  display: none;
+}
+.mobile-locations-container {
+  padding-inline: 20px;
+  padding-block: 50px;
+  .mobile-locations-heading {
+    p:nth-child(1) {
+      font-family: "Mallory-Book", serif;
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p:nth-child(2) {
+      font-family: "Canela-Regular", serif;
+      font-size: 28px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  .mobile-locations-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 50px;
+    .mobile-locations-card-1,
+    .mobile-locations-card-2,
+    .mobile-locations-card-3 {
+      height: 90vw;
+      width: calc(100vw - 40px);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      .mobile-location-cards-heading {
+        font-family: "Canela-Regular", serif;
+        font-size: 28px;
+        color: var(--white);
+      }
+      .mobile-location-cards-text {
+        font-family: "Mallory-Book", serif;
+        font-size: 14px;
+        color: var(--white);
+        margin-bottom: 30px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-locations-container {
+    .mobile-locations-cards-container {
+      .mobile-locations-card-1,
+      .mobile-locations-card-2,
+      .mobile-locations-card-3 {
+        max-height: 60vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mobile-locations-container {
+    display: none;
+  }
+  .desktopLocationsContainer {
+    position: relative;
+    display: flex;
+    max-width: calc(1920px - 60px);
+    padding: 0px 30px;
+    margin: 0 auto;
+    .desktopLocationsHeading {
+      position: absolute;
+      width: 80vw;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: white;
+      p:nth-child(1) {
+        font-family: "Mallory-Book", serif;
+      }
+      p:nth-child(2) {
+        font-family: "Canela-Regular", serif;
+        font-size: 48px;
+      }
+    }
+    .panel-links {
+      display: flex;
+    }
+  }
+  .panel-01,
+  .panel-02,
+  .panel-03 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: calc(100vw);
+    height: calc(100vw / 2);
+    width: calc((100vw - 60px) / 3);
+    color: #fff;
+    display: flex;
+    flex: 1;
+    margin: 0px;
+    position: relative;
+    transition: flex 1.2s cubic-bezier(0.12, 0.16, 0.11, 1.23);
+    cursor: pointer;
+    .panel-locations {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      p:nth-child(2) {
+        font-family: "Mallory-Book", serif;
+        // text-transform: uppercase;
+        font-size: 14px;
+        margin: 0px;
+        transition: all 1.2s cubic-bezier(0.12, 0.16, 0.11, 1.23);
+        opacity: 1;
+        cursor: pointer;
+      }
+      .explore-link {
+        p {
+          font-family: "Mallory-Book", serif !important;
+          // text-transform: uppercase;
+          font-size: 14px !important;
+          margin: 0px;
+          transition: all 1.2s cubic-bezier(0.12, 0.16, 0.11, 1.23) !important;
+          opacity: 1 !important;
+          cursor: pointer !important;
+        }
+      }
+      p:nth-child(1) {
+        font-family: "Canela-Regular", serif;
+        font-size: 26px;
+        margin-bottom: 15px;
+        width: 250px;
+        transition: all 1.2s cubic-bezier(0.12, 0.16, 0.11, 1.23);
+        opacity: 1;
+        cursor: pointer;
+        text-align: center;
+      }
+      a:hover {
+        color: var(--white);
+      }
+      .panel-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  .panel-01:hover .panel-locations-01 {
+    p {
+      opacity: 1;
+      transform: translateY(-100px);
+    }
+  }
+  .panel-02:hover .panel-locations-02 {
+    p {
+      opacity: 1;
+      transform: translateY(-100px);
+    }
+  }
+  .panel-03:hover .panel-locations-03 {
+    p {
+      opacity: 1;
+      transform: translateY(-100px);
+    }
+  }
+  .panel-01:hover,
+  .panel-02:hover,
+  .panel-03:hover {
+    flex: 2;
+    width: 720px;
+  }
+  .desktopLocationsHeading {
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      pointer-events: none;
+      transition: all 1.2s cubic-bezier(0.12, 0.16, 0.11, 1.23);
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  .desktopLocationsContainer:hover .desktopLocationsHeading {
+    p {
+      transition: all 1.2s cubic-bezier(0.12, 0.16, 0.11, 1.23);
+      opacity: 0;
+      scale: 0.7;
+      transform: translateY(-400px);
+    }
+  }
+}

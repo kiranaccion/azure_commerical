@@ -1,0 +1,114 @@
+.marker-clustering-tree {
+  font-size: 2rem;
+  /* background-color: white; */
+}
+
+.marker-clustering-control-panel .attribution {
+  font-size: 0.75em;
+}
+
+.google-map-container {
+  height: 120vw;
+  min-height: 350px;
+  padding: 20px;
+  padding-bottom: 0px;
+  background-color: var(--slate-10);
+  position: relative;
+  scroll-margin-top: 78px;
+
+  .highlighted-property-label {
+    position: absolute;
+    color: #000 !important;
+    top: -20px;
+    transform: translateX(-50%);
+    font-family: 'Mallory', serif;
+    font-size: 16px !important;
+    font-weight: 700;
+    background: #fff;
+    line-height: 21px;
+    text-align: left;
+    padding: 10px 15px 10px 15px;
+  }
+}
+
+.no-properties {
+  height: 180px;
+  display: flex;
+  gap: 20px;
+  background-color: var(--slate-15);
+  align-items: center;
+  justify-content: center;
+  .message {
+    font-family: 'Mallory-Book', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30.14px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .google-map-container {
+    height: 60vw;
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .google-map-container {
+    height: 800px;
+    padding-bottom: 0px;
+  }
+}
+
+.map-pin-cluster {
+  text-align: justify;
+}
+.map-pin-cluster:hover {
+  background: url('/googleMapsClustererOnHover.svg');
+  text-align: justify;
+  img {
+    display: none;
+  }
+}
+.map-pin-cluster-selected {
+  background-image: url('/googleMapsClustererOnHover.svg');
+  text-align: justify;
+}
+
+.map-control {
+  position: absolute;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.map-checkboxes-control {
+  width: auto;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 767px) {
+  .map-control {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .map-control-center {
+    transform: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .map-checkboxes-control {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .gmnoprint {
+    display: none !important;
+  }
+}

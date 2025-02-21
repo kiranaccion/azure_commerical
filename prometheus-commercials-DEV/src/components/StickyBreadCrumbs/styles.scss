@@ -1,0 +1,50 @@
+.breadcrumbs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #f8f8f8;
+
+  .detail-page-sections {
+    display: flex;
+    gap: 20px;
+
+    .section-item {
+      display: flex;
+      a {
+        text-transform: capitalize;
+        font-family: Mallory;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-align: left;
+      }
+
+      .active {
+        color: var(--tango);
+        border-bottom: 2px solid var(--tango);
+      }
+    }
+  }
+
+  .view-section {
+    display: flex;
+    gap: 30px;
+
+    text-transform: capitalize;
+    font-family: Mallory;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: left;
+
+    .get-in-touch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+  }
+}

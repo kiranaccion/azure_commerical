@@ -1,0 +1,51 @@
+name: Commercial CI/CD for DEV
+# Trigger the workflow on push and workflow dispatch to the DEV branch
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - DEV
+
+jobs:
+  build:
+    runs-on: ${{ vars.HOSTED_RUNNER_GITHUB }}
+    steps:
+      # Check out the repository code
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      # Set up the Node.js environment
+      - name: Use Node.js ${{ vars.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ vars.NODE_VERSION }}
+      # Install npm dependencies
+      - name: Install dependencies
+        run: npm install
+      - name: code build using npm
+        run: npm run build:dev
+      - name: list the build artifacts
+        run: ls -alrth
+      # Generate a deployment package for Elastic Beanstalk
+      - name: Generate reg-home deployment package for EB
+        run: |
+          zip -r ${{ github.ref_name }}-${{ github.run_number}}-reg.zip .next public package.json package-lock.json Procfile 
+          ls
+
+      # Upload the deployment package as an artifacts
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          path: ${{ github.ref_name }}-${{ github.run_number}}-reg.zip
+      # Deploy the package to Elastic Beanstalk
+      #changed the varialbles for the new environment
+      #changed the varialbles for the new environment
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_COMMERCIAL_DEV }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_COMMERCIAL_DEV }}
+          application_name: 'prometheus-reg'
+          environment_name: 'prometheus-reg-dev-env'
+          version_label: ${{ github.ref_name }}-${{ github.run_number}}-reg-home.zip
+          region: 'us-west-2'
+          deployment_package: ${{ github.ref_name }}-${{ github.run_number}}-reg.zip

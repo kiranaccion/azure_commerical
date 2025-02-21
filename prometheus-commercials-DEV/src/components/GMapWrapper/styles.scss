@@ -1,0 +1,27 @@
+.marker-clustering-tree {
+  font-size: 2rem;
+  /* background-color: white; */
+}
+
+.marker-clustering-control-panel .attribution {
+  font-size: 0.75em;
+}
+
+.google-map-container {
+   height: 120vw;
+   min-height: 350px;
+   padding: 20px;
+   background-color: #dddfe5;
+}
+
+@media screen and (min-width: 768px) {
+  .google-map-container{
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .google-map-container{
+    height: 800px;
+  }
+}

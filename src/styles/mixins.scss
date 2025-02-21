@@ -1,0 +1,295 @@
+@import '../styles/variables.scss';
+
+@mixin desktop-p2 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--slate);
+  text-align: left;
+}
+
+@mixin read-more-link {
+  width: 154px;
+  height: 19px;
+  color: var(--slate);
+  font-size: 14px;
+  font-family: 'Mallory-Book', serif;
+  font-weight: 600;
+  font-style: none;
+  line-height: 150%;
+
+  display: flex;
+  gap: 25px;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--tango);
+  }
+}
+
+///////// DESKTOP /////////
+
+@mixin desktop-h1 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  color: var(--slate);
+}
+@mixin desktop-h2 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--slate);
+}
+@mixin desktop-h3 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  color: var(--slate);
+}
+@mixin desktop-h4 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--slate);
+}
+@mixin desktop-p1 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--slate);
+}
+
+@mixin desktop-p3 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 350;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--slate);
+}
+@mixin desktop-nav {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--slate);
+}
+@mixin desktop-eyebrow {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--slate);
+}
+
+///////// TABLET /////////
+
+@mixin tablet-h1 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--slate);
+}
+@mixin tablet-h2 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  color: var(--slate);
+}
+@mixin tablet-h3 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--slate);
+}
+@mixin tablet-h4 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--slate);
+}
+@mixin tablet-p1 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--slate);
+}
+@mixin tablet-p2 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--slate);
+}
+@mixin tablet-p3 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 350;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--slate);
+}
+@mixin tablet-nav {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--slate);
+}
+@mixin tablet-eyebrow {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--slate);
+}
+
+///////// MOBILE /////////
+
+@mixin mobile-h1 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 31px;
+  color: var(--slate);
+}
+@mixin mobile-h2 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--slate);
+}
+@mixin mobile-h3 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--slate);
+}
+@mixin mobile-h4 {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--slate);
+}
+@mixin mobile-p1 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--slate);
+}
+@mixin mobile-p2 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--slate);
+}
+@mixin mobile-p3 {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 350;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--slate);
+}
+@mixin mobile-nav {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--slate);
+}
+
+///////// SPECIAL /////////
+
+@mixin special-h1-large {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 62px;
+  color: var(--slate);
+}
+@mixin special-card-title {
+  font-family: 'Canela-Regular', serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--slate);
+}
+@mixin special-card-title-small {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--slate);
+}
+@mixin special-card-info-big {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--slate);
+}
+@mixin special-card-info-small {
+  font-family: 'Mallory-Medium', serif;
+  font-weight: 350;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--slate);
+}
+@mixin special-nav-small {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--slate);
+}
+@mixin special-promo {
+  font-family: 'Mallory-Book', serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--tango);
+}
+
+///////// LINKS /////////
+
+@mixin link-hover {
+  margin: 30px auto;
+  width: 65px;
+  display: inline-block;
+  position: relative;
+  :hover {
+    color: var(--tango);
+  }
+  ::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--tango);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  :hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

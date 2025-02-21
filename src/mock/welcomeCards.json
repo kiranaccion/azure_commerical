@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Welcome Home",
+    "subTitle": "Prometheus",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+  },
+  {
+    "imgSrc": "https://assets.prometheusapartments.com/transform/45857880-63a5-487c-9ff3-3f79bcc0e5df/10_BRICKLINE_Photos-By-Jason-O-Rear?quality=75",
+    "title": "apartments",
+    "redirectionUrl": "https://prometheusapartments.com"
+  },
+  {
+    "imgSrc": "https://assets.prometheusapartments.com/transform/482936c4-fd3e-4946-886c-8de8715d4efd/Park-Place-South-1?quality=75",
+    "title": "office",
+    "redirectionUrl": "/office"
+  },
+  {
+    "imgSrc": "https://assets.prometheusapartments.com/transform/fb984796-024b-48c9-999d-aaf6beee4cbb/The-Dean_Prometheus_0042?quality=75",
+    "title": "retail",
+    "redirectionUrl": "/retail"
+  }
+]

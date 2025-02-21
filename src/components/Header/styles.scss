@@ -1,0 +1,297 @@
+.prom-reg-header-container {
+  .prom-reg-header {
+    height: 80px;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    border-bottom: 2px solid #eeeff2;
+    justify-content: space-between;
+    svg {
+      cursor: pointer;
+    }
+
+    .headerButtonsContainer {
+      width: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  .prom-reg-navbar {
+    // height: 60px;
+    // background-color: var(--slate-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .prom-nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0px;
+      gap: 46px;
+      width: min-content;
+      .prom-reg-nav-links {
+        font-family: 'Mallory-Book', serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600 !important;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--slate);
+      }
+      .prom-reg-nav-links:hover {
+        color: var(--tango);
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 5px;
+      }
+      .prom-reg-nav-active-link {
+        color: #fc4d0f;
+      }
+    }
+  }
+
+  .mobileMenuContainer {
+    .menuOverlayContainer {
+      height: 100vh;
+      margin-top: -10px;
+      overflow-y: scroll;
+      width: 100%;
+      display: block;
+      background: #ffffff;
+      padding: 0 20px;
+      position: relative;
+      z-index: 4;
+      .mobile-locations-tab {
+        .mobile-locations-section {
+          text-align: left;
+          .mobile-loc-apartment-title {
+            font-family: 'Mallory-Book', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #fc4d0f;
+            margin: 24px 0;
+          }
+          .mobile-loc-apartment {
+            font-family: 'Mallory-Book', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #24272c;
+            margin-bottom: 24px;
+            cursor: pointer;
+          }
+          .mobile-loc-apartment:hover {
+            color: #fc4d0f;
+          }
+          .mobile-loc-line {
+            width: 375px;
+            border: 1px solid #dddfe5;
+          }
+        }
+      }
+      .mobile-locations-section:last-child {
+        padding-bottom: 100px;
+      }
+    }
+    .menuOverlayContainer::-webkit-scrollbar {
+      display: none;
+    }
+
+    .overlayMenuItemsContainer {
+      margin: 0;
+      padding: 0;
+      .mobileMenuOptionsUnderLine:nth-of-type(3) {
+        display: none;
+      }
+    }
+    .overlayMenuItem {
+      font-family: 'Mallory-Book', serif;
+      font-style: normal;
+      font-weight: 600 !important;
+      font-size: 16px;
+      line-height: 150%;
+      color: #24272c;
+      list-style-type: none;
+      text-align: left;
+      padding: 25px 0 25px 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .locations {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .locationsOpenIcon {
+      background: transparent;
+      outline: none;
+      border: 0;
+    }
+    .headerMenuItem {
+      font-family: 'Mallory-Book', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #24272c;
+      list-style-type: none;
+      text-align: left;
+      padding-top: 24px;
+      cursor: pointer;
+    }
+
+    .headerMenuItemsContainer {
+      margin: 0;
+      padding: 0;
+      li:first-of-type {
+        margin-top: -7px;
+      }
+    }
+  }
+
+  .menuIcon {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+    .headerSearchBar {
+      display: flex;
+    }
+    .headerSearchContainer {
+      margin: auto;
+      width: max-content;
+      .autoCompleteContainer {
+        svg {
+          top: 13px;
+        }
+        .MuiAutocomplete-root {
+          width: 350px;
+          input {
+            background-color: var(--slate-10);
+            height: 40px;
+          }
+          ::placeholder {
+            // color: var(--tango);
+          }
+        }
+      }
+    }
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
+.z-index-override {
+  position: relative;
+  z-index: 99999991;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .prom-reg-header-container {
+    position: relative;
+    top: 0%;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    background: #ffffff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    .headerButtonsContainer {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .headerSearchContainer {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        height: 100vh;
+        z-index: 100;
+        background-color: #ffffff;
+        .autoCompleteContainer {
+          width: 100vw;
+          position: relative;
+          height: 60px;
+          .MuiAutocomplete-root {
+            height: 60px;
+            input {
+              height: 60px;
+              width: 100vw;
+              background-color: #dfdfdf;
+            }
+            input:focus,
+            input:active {
+              outline: var(--tango);
+            }
+          }
+          input::placeholder {
+            color: var(--tango);
+          }
+          svg {
+            top: 50%;
+            transform: translateY(-40%);
+            path {
+              fill: var(--tango);
+            }
+          }
+        }
+      }
+      .hamburger-react {
+        margin: 0px -8px 0 -8px;
+      }
+      .tabletHamburgerMenu {
+        display: none;
+      }
+    }
+    .prom-reg-navbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .prom-reg-header-container {
+    .prom-reg-navbar {
+      .prom-nav-container {
+        display: none;
+        gap: 92px;
+        // margin-left: -200px;
+        .prom-reg-nav-links {
+          font-size: 16px;
+        }
+      }
+    }
+    .mobileHamburgerMenu {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .prom-reg-header-container {
+    .prom-reg-header {
+      .prom-nav-container {
+        display: flex;
+        margin-left: 120px;
+      }
+
+      .mobileHamburgerMenu {
+        display: none;
+      }
+    }
+  }
+}
+
+.headerLoaderSpinner {
+  svg {
+    circle {
+      stroke: var(--tango);
+    }
+  }
+}

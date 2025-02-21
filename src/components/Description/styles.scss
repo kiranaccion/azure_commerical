@@ -1,0 +1,52 @@
+.descriptionSection {
+  padding: 30px 20px 30px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--slate-10);
+  .descriptionInnerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .descriptionHeader {
+      color: var(--slate, #24272c);
+      font-family: 'Canela-Regular', serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .descriptionBody {
+      color: #24272c;
+      text-align: left;
+      font-family: 'Mallory-Book', serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150.687%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .descriptionSection {
+    padding: 50px 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .descriptionSection {
+    padding-block: 80px;
+    padding-inline: 16%;
+    .descriptionInnerContainer {
+      max-width: 1240px;
+      .descriptionHeader {
+        font-size: 36px;
+      }
+      .descriptionBody {
+        font-size: 20px;
+      }
+    }
+  }
+}

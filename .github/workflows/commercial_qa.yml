@@ -1,0 +1,47 @@
+# Trigger the workflow on push and workflow dispatch to the QA branch
+name: Commercial CI/CD for QA
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - QA
+
+jobs:
+  build:
+    runs-on: ${{ vars.HOSTED_RUNNER_GITHUB }}
+    steps:
+      # Check out the repository code
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - name: Use Node.js ${{ vars.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ vars.NODE_VERSION }}
+        # Install npm dependencies
+      - name: Install dependencies
+        run: npm install
+      - name: code build using npm
+        run: npm run build:qa
+      - name: list the build artifacts
+        run:
+          ls -alrth
+          # Generate a deployment package for Elastic Beanstalk
+      - name: Generate deployment package for EB
+        run: zip -r ${{ github.ref_name }}-${{ github.run_number}}-reg.zip .next public package.json package-lock.json
+      - run: ls -alrth
+        # Upload the deployment package as an artifacts
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          path: ${{ github.ref_name }}-${{ github.run_number}}-reg.zip
+          # Deploy the package to Elastic Beanstalk
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID_STAGE }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_STAGE }}
+          application_name: ${{ vars.COMMERCIAL_EB_APP_NAME_QA }}
+          environment_name: ${{ vars.COMMERCIAL_EB_ENV_NAME_QA }}
+          version_label: ${{ github.ref_name }}-${{ github.run_number}}-reg.zip
+          region: ${{ vars.AWS_REGION_ACTIVE }}
+          deployment_package: ${{ github.ref_name }}-${{ github.run_number}}-reg.zip

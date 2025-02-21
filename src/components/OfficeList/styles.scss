@@ -1,0 +1,80 @@
+.grid {
+  display: flex;
+  height: auto;
+  max-width: 100vw;
+  align-items: center;
+  padding: 30px;
+  background-color: rgba(238, 239, 242, 1);
+  position: relative;
+  transition: 0.05s all ease-in-out;
+  overflow-y: hidden !important;
+  .submenu-carousel-left,
+  .submenu-carousel-right {
+    display: none;
+  }
+  .office-items-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+    overflow: scroll;
+    padding-right: 20px;
+  }
+
+  .card {
+    height: 250px;
+    width: 275px;
+    transition: 0.05s all ease-in-out;
+    .image-wrapper {
+      width: 275px;
+      transition: 0.05s all ease-in-out;
+    }
+  }
+  .selected {
+    height: 275px;
+    transition: 0.05s all ease-in-out;
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.33);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.33);
+  }
+}
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+.office-items-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    // margin-left: 20px;
+    height: 347px;
+    // overflow-x: auto;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .grid {
+    position: relative;
+    .submenu-carousel-left,
+    .submenu-carousel-right {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    .submenu-carousel-left {
+      left: 60px;
+    }
+    .submenu-carousel-right {
+      right: 60px;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.carousal-component-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--slate-10);
+
+  .carousal-section {
+    width: 100%;
+    position: relative;
+    .carousal-arrows-container {
+      display: none;
+    }
+    .carousal-items-container {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 30px;
+      padding-top: 5px;
+      padding-inline: 5px;
+    }
+  }
+}
+
+.carousal-items-container::-webkit-scrollbar {
+  padding-top: 30px;
+  background-color: var(--pewter);
+  height: 3px;
+}
+.carousal-items-container::-webkit-scrollbar-thumb {
+  background-color: var(--tango);
+}
+
+@media screen and (min-width: 768px) {
+  .carousal-component-section {
+    padding: 30px;
+    padding-top: 30px;
+    width: 100%;
+    .carousal-section {
+      width: 100%;
+
+      .carousal-items-container {
+        width: 100%;
+        gap: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .carousal-component-section {
+    .carousal-section {
+      width: calc(100vw - 60px);
+      position: relative;
+      .carousal-items-container {
+        width: auto;
+        padding-left: 5px;
+        padding-top: 5px;
+        padding-right: 5px;
+      }
+      .carousal-arrows-container {
+        display: none;
+        z-index: 2;
+        button:nth-child(1) {
+          position: absolute;
+          left: 20px;
+          top: 230px;
+          z-index: 9;
+          transform: scale(0.8);
+        }
+        button:nth-child(2) {
+          position: absolute;
+          right: 20px;
+          top: 230px;
+          z-index: 9;
+          transform: scale(0.8);
+        }
+      }
+    }
+    .carousal-section:hover {
+      .carousal-arrows-container {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .carousal-component-section {
+    .carousal-section {
+      .carousal-arrows-container {
+        // display: block;
+        z-index: 2;
+        button:nth-child(1) {
+          position: absolute;
+          left: 20px;
+          top: 230px;
+          z-index: 9;
+        }
+        button:nth-child(2) {
+          position: absolute;
+          right: 20px;
+          top: 230px;
+          z-index: 9;
+        }
+      }
+      // .carousal-items-container {
+      //   width: 1380px;
+      // }
+    }
+  }
+}
+
+// @media screen and (min-width: 1600px) {
+//   .carousal-component-section {
+//     .carousal-section {
+//       width: 1540px;
+
+//       .carousal-items-container {
+//         width: 1540px;
+//       }
+//     }
+//   }
+// }
+
+.carousal-arrows-container button.disabled {
+  opacity: 0.5;
+  // pointer-events: none;
+  cursor: not-allowed;
+}

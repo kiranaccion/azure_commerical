@@ -1,0 +1,237 @@
+.gallery-menu {
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  background: #dddfe5;
+  justify-content: space-between;
+  padding-right: 50px;
+  // position: relative;
+
+  .gallery-menu-nav {
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .gallery-menu-mobile-nav {
+    display: none;
+  }
+
+  .menu-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+  }
+  .menu-item:last-child {
+    pointer-events: none;
+  }
+
+  .menu-link {
+    margin-left: 5px;
+    font-family: 'Mallory-Book', serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14.4px;
+    color: #24272c;
+    text-transform: uppercase;
+  }
+
+  .menu-link:hover {
+    text-decoration: none;
+    color: var(--tango);
+  }
+
+  .icon {
+    margin-right: 5px;
+  }
+
+  .more-properties {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    cursor: pointer;
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: 0.5px;
+
+      color: #24272c;
+      font-family: 'Mallory-Book', serif;
+    }
+
+    .expand-icon {
+      cursor: pointer;
+    }
+  }
+
+  .go-back {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover p {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      color: var(--tango);
+    }
+    p {
+      font-family: 'Mallory-Book', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14.4px;
+      line-height: 17px;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #24272c;
+    }
+  }
+}
+
+.gallery-menu-sticky {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumbs-card {
+  height: auto;
+  width: 200px;
+  position: absolute;
+  top: 55px;
+  left: 80px;
+  z-index: 100;
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px !important;
+    // padding-bottom: 0 !important;
+    .card-menu-list {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Mallory-Book', serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14.4px;
+      text-align: left;
+      color: #24272c;
+      gap: 10px;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .breadcrumbs-card {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-menu {
+    .go-back {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-menu {
+    .gallery-menu-nav {
+      display: none;
+      .menu-list {
+        .menu-item {
+          display: none;
+          .menu-link {
+            text-transform: uppercase;
+          }
+        }
+        .menu-item:nth-child(1),
+        .menu-item:last-child {
+          display: flex;
+        }
+        .menu-item:nth-child(1)::after {
+          content: '...';
+          margin-left: 10px;
+        }
+        .menu-item:nth-child(1) {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .gallery-menu-mobile-nav {
+      transition: all 0.3s ease;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .menu-list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .menu-item {
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+        }
+      }
+
+      .menu-link {
+        margin-left: 5px;
+        font-family: 'Mallory-Book', serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14.4px;
+        color: #24272c;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .ellipse {
+        cursor: pointer;
+      }
+
+      .icon {
+        margin-right: 5px;
+      }
+
+      .more-properties {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        p {
+          font-family: 'Mallory-Book', serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+          letter-spacing: 0.5px;
+          color: #24272c;
+        }
+
+        .expand-icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

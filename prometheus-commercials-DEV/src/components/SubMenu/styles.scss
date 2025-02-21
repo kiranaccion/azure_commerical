@@ -1,0 +1,73 @@
+.sub-menu {
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+
+  .sub-menu-nav {
+    background-color: #f8f8f8;
+    transition: all 0.3s ease;
+
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+  }
+
+  .menu-link {
+    margin-left: 5px;
+    font-family: Mallory;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 14.4px;
+    color: #24272c;
+  }
+
+  .menu-link:hover {
+    text-decoration: underline;
+  }
+
+  .icon {
+    margin-right: 5px;
+  }
+
+  .more-properties {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    p {
+      font-family: "Mallory";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+
+      color: #24272c;
+    }
+
+    .expand-icon {
+      cursor: pointer;
+    }
+  }
+}
+
+.sub-menu-sticky {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

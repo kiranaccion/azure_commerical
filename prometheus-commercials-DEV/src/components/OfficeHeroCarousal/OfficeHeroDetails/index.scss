@@ -1,0 +1,54 @@
+.office-hero-details-section {
+  padding: 57px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .office-hero-details-heading {
+    color: var(--rich-black);
+    text-align: center;
+    font-family: "Canela-Regular", serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .office-hero-details-description,
+  .office-hero-details-subtitle {
+    margin-top: 27px;
+    color: var(--rich-black);
+    text-align: center;
+    font-family: "Mallory-Book", serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .office-hero-details-subtitle {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .office-hero-details-section {
+    width: 768px;
+    padding: 57px 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .office-hero-details-section {
+    width: 100%;
+    max-width: 1600px;
+    height: 360px;
+
+    .office-hero-details-description,
+    .office-hero-details-subtitle {
+      width: 997px;
+    }
+  }
+}

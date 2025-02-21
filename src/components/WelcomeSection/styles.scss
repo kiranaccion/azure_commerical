@@ -1,0 +1,96 @@
+.prom-reg-welcome-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-inline: 20px;
+  padding-block: 30px;
+  width: 100%;
+  background-color: var(--slate-10);
+  .prom-welcome-gray-logo {
+    fill: var(--slate-15);
+    height: 150px !important;
+    width: fit-content !important;
+    left: 50% !important;
+    top: 60px !important;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  .prom-welcome-section-header,
+  .prom-welcome-section-subheader {
+    font-family: 'Canela-Regular', serif;
+  }
+  .prom-welcome-section-header {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 62.4px;
+    text-align: center;
+    margin-top: 80px;
+    z-index: 1;
+    min-height: 62px;
+  }
+  .prom-welcome-section-subheader {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 43.2px;
+    text-align: center;
+    margin-top: 80px !important;
+  }
+
+  .prom-welcome-section-text,
+  p {
+    font-family: 'Mallory-Book', serif;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 37px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .prom-reg-welcome-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // padding-inline: 120px;
+    padding-block: 60px;
+    width: 100%;
+    background-color: var(--slate-10);
+    .prom-welcome-gray-logo {
+      fill: var(--slate-15);
+      height: 150px !important;
+      width: fit-content !important;
+      left: 50% !important;
+      top: 60px !important;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .prom-welcome-section-header,
+    .prom-welcome-section-subheader {
+      font-family: 'Canela-Regular', serif;
+    }
+    .prom-welcome-section-header {
+      font-size: 52px;
+      font-weight: 400;
+      line-height: 62.4px;
+      text-align: center;
+      margin-top: 16px;
+      z-index: 1;
+    }
+    .prom-welcome-section-subheader {
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 43.2px;
+      text-align: center;
+      margin-top: 120px;
+    }
+
+    .prom-welcome-section-text,
+    p {
+      font-family: 'Mallory-Book', serif;
+      font-size: 20px;
+      margin-top: 26px;
+    }
+  }
+}

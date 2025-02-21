@@ -1,0 +1,45 @@
+name: Commercial CI/CD for DEV
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - DEV
+
+jobs:
+  build:
+    runs-on: ${{ vars.HOSTED_RUNNER_GITHUB }}
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+      - name: Use Node.js ${{ vars.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ vars.NODE_VERSION }}
+      - name: Install dependencies
+        run: npm install
+      - name: code build using npm
+        run: npm run build
+      - name: list the build artifacts
+        run: ls -alrth
+      - name: Generate reg-home deployment package for EB
+        #working-directory: apps/reg-home
+        run: |
+          zip -r ${{ github.ref_name }}-${{ github.run_number}}-reg-home.zip .next public package.json package-lock.json Procfile 
+          ls
+
+      # Upload the deployment package as an artifact
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          path: ${{ github.ref_name }}-${{ github.run_number}}-reg-home.zip
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_COMMERCIAL_DEV }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_COMMERCIAL_DEV }}
+          application_name: ${{ vars.COMMERCIAL_EB_APP_NAME_DEV }}
+          environment_name: ${{ vars.COMMERCIAL_HOME_EB_ENV_NAME_DEV }}
+          version_label: ${{ github.ref_name }}-${{ github.run_number}}-reg-home.zip
+          region: "us-west-2"
+          deployment_package: ${{ github.ref_name }}-${{ github.run_number}}-reg-home.zip
